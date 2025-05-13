@@ -1,0 +1,70 @@
+🖥️ Atalhos Gerais do VS Code
+Ctrl + Shift + P → Abrir a Paleta de Comandos
+
+Ctrl + Tab → Alternar entre arquivos abertos
+
+Ctrl + W → Fechar o editor ativo
+
+Ctrl + Shift + ' → Abrir um novo terminal
+
+Ctrl + Shift + [ / ] → Alternar entre terminais abertos
+
+F8 / Shift + F8 → Navegar entre erros ou avisos
+
+Ctrl + , → Abrir configurações do VS Code
+
+⚙️ Atalhos Específicos para Go
+Shift + Alt + F → Formatar código (gofmt)
+
+F2 → Renomear símbolo (variáveis, funções, métodos)
+
+F12 → Ir para definição (Go to Definition)
+
+Ctrl + F12 → Ver implementação (Go to Implementation)
+
+Shift + F12 → Abrir referência do símbolo
+
+Ctrl + . → Mostrar dicas de código e sugestões (Quick Fix)
+
+Ctrl + Shift + I → Auto-import de pacotes
+
+🐞 Atalhos de Depuração
+Ctrl + Shift + D → Abrir painel de depuração
+
+F5 → Iniciar depuração (Run and Debug)
+
+F9 → Adicionar ponto de interrupção (Breakpoint)
+
+F10 → Passar para a próxima linha (Step Over)
+
+F11 → Entrar na função (Step Into)
+
+Shift + F11 → Sair da função (Step Out)
+
+Ctrl + Shift + F5 → Reiniciar depuração
+
+Shift + F5 → Parar depuração
+
+✍️ Atalhos de Edição de Código
+Shift + Alt + ↓ → Copiar linha para baixo (Duplicate Line)
+
+Shift + Alt + ↑ → Copiar linha para cima
+
+Alt + ↑ → Mover linha para cima
+
+Alt + ↓ → Mover linha para baixo
+
+Ctrl + / → Comentar/descomentar linha
+
+Ctrl + D → Selecionar palavra ou bloco de código
+
+🖥️ Terminal e Git
+Ctrl + Shift + ' → Abrir novo terminal
+
+Ctrl + Shift + [ / ] → Navegar entre terminais
+
+Ctrl + Shift + G → Abrir painel do Git
+
+Ctrl + Enter → Confirmar mudanças (Git Commit)
+
+Ctrl + Shift + H → Abrir histórico de versões (Git Log)

@@ -1,0 +1,147 @@
+Tipos em Go: Fundamentos e Características
+Em Go, os tipos definem a natureza dos dados que uma variável pode armazenar e as operações que podem ser realizadas com ela. Vamos explorar detalhadamente o sistema de tipos em Go:
+
+🏗️ Tipos Básicos (Primitivos)
+Go possui vários tipos básicos pré-definidos:
+
+1. Tipos Numéricos
+Inteiros:
+
+go
+var i int       // Tamanho depende da plataforma (32 ou 64 bits)
+var i8 int8     // -128 a 127
+var i16 int16   // -32768 a 32767
+var i32 int32   // -2³¹ a 2³¹-1
+var i64 int64   // -2⁶³ a 2⁶³-1
+Sem sinal:
+
+go
+var u uint       // Similar a int, mas sem sinal
+var u8 uint8     // 0 a 255
+var u16 uint16   // 0 a 65535
+var u32 uint32   // 0 a 2³²-1
+var u64 uint64   // 0 a 2⁶⁴-1
+var b byte       // alias para uint8
+Ponto flutuante:
+
+go
+var f32 float32 // IEEE-754 32-bit
+var f64 float64 // IEEE-754 64-bit (recomendado)
+Complexos:
+
+go
+var c64 complex64   // float32 real e imaginary parts
+var c128 complex128 // float64 real e imaginary parts
+2. Tipos Textuais
+go
+var s string  // Sequência de bytes (UTF-8 por padrão)
+var r rune    // alias para int32, representa um código Unicode
+3. Tipos Booleanos
+go
+var b bool    // true ou false
+
+
+🏢 Tipos Compostos
+1. Arrays (Tamanho fixo)
+go
+var arr [3]int        // Array de 3 inteiros
+arrLit := [3]int{1, 2, 3} // Inicializado
+2. Slices (Tamanho dinâmico)
+go
+var slice []int               // Declaração
+slice := make([]int, 3)       // Criação com make
+slice := []int{1, 2, 3}       // Inicialização
+subSlice := slice[1:3]        // "Fatia" do slice
+3. Maps (Dicionários)
+go
+var m map[string]int          // Declaração
+m = make(map[string]int)      // Inicialização
+m := map[string]int{"a": 1}   // Literal
+4. Structs (Estruturas)
+go
+type Pessoa struct {
+    Nome string
+    Idade int
+}
+
+p := Pessoa{"João", 30}
+p := Pessoa{Nome: "João", Idade: 30} // Estilo nomeado
+
+
+🔄 Tipos de Referência
+Ponteiros:
+
+go
+var p *int        // Ponteiro para int
+x := 10
+p = &x            // & obtém o endereço
+*p = 20           // * dereferencia
+Funções (são tipos de primeira classe):
+
+go
+var f func(int) int
+f = func(x int) int { return x * x }
+Interfaces:
+
+go
+type Leitor interface {
+    Leia() string
+}
+
+
+🔄 Conversão de Tipos
+Go requer conversão explícita entre tipos:
+
+go
+var i int = 42
+var f float64 = float64(i)
+var u uint = uint(f)
+
+// Erro comum:
+// result := f + i  // Inválido!
+result := f + float64(i)  // Correto
+🧩 Tipos Personalizados
+Você pode criar novos tipos baseados em tipos existentes:
+
+go
+type Celsius float64
+type ID string
+
+var temp Celsius = 36.6
+var userID ID = "usr_123"
+
+
+🚨 Comportamentos Importantes
+Zero Values: Cada tipo tem um valor padrão quando declarado:
+
+0 para numéricos
+
+false para booleanos
+
+"" para strings
+
+nil para ponteiros, slices, maps, channels e funções
+
+Comparabilidade:
+
+Tipos comparáveis: básicos, ponteiros, channels, interfaces, structs/arrays contendo apenas tipos comparáveis
+
+Tipos não comparáveis: slices, maps, funções
+
+Type Inference (Inferência de Tipos):
+
+go
+x := 42      // int
+y := 3.14    // float64
+z := "texto" // string
+
+
+💡 Quando Usar Cada Tipo
+Para desempenho crítico: Escolha tipos específicos (int32 vs int)
+
+Para interoperabilidade: Use tipos explícitos ao trabalhar com redes/arquivos
+
+Para código genérico: Interfaces ou generics (Go 1.18+)
+
+📚 Documentação Oficial
+Para mais detalhes, consulte a especificação de tipos em Go.
