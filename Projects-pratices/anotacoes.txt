@@ -1,0 +1,13 @@
+mkdir lista-tarefas-app
+cd lista-tarefas-app
+mkdir backend
+cd backend
+go mod init tarefas-backend
+
+
+front-end
+
+cd lista-tarefas-app
+npx create-react-app frontend
+cd frontend
+npm install axios

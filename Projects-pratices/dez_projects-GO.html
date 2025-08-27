@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Projetos Go + React </title>
+    <style>
+        :root {
+            --primary: #00ADD8;
+            --secondary: #007D9C;
+            --accent: #61DAFB;
+            --light: #F5F8FA;
+            --dark: #24292E;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+        }
+        
+        .project-body {
+            padding: 20px;
+        }
+        
+        .project-body h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+        
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .tech span {
+            background: var(--light);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--dark);
+        }
+        
+        .links {
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .difficulty {
+            display: flex;
+            margin: 10px 0;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background: #ddd;
+        }
+        
+        .dot.filled {
+            background: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>10 Projetos Práticos com Go + React</h1>
+
+        <h5>https://github.com/pauloskaterock</h5><br>
+        <p>Para  construírem um portfólio impressionante</p>
+    </header>
+    
+    <div class="intro">
+        <p>Estes projetos vão te ajudar a praticar Go no backend e React no frontend, criando um portfólio diversificado e atraente para recrutadores.</p>
+    </div>
+    
+    <div class="projects">
+        <!-- Projeto 1 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>📝 Lista de Tarefas</h2>
+            </div>
+            <div class="project-body">
+                <h3>Gerenciador de Tarefas Pessoal</h3>
+                
+                <p>Um aplicativo CRUD completo para gerenciar tarefas diárias com categorias, prioridades e prazos.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>SQLite</span>
+                    <span>REST API</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 2 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>🌤️ Clima App</h2>
+            </div>
+            <div class="project-body">
+                <h3>Aplicativo de Previsão do Tempo</h3>
+                <p>Consome uma API de previsão do tempo e exibe informações meteorológicas para cidades ao redor do mundo.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>API Externa</span>
+                    <span>JSON</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 3 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>📊 Conversor de Moedas</h2>
+            </div>
+            <div class="project-body">
+                <h3>Conversor de Moedas em Tempo Real</h3>
+                <p>Conversor que utiliza taxas de câmbio atualizadas através de uma API financeira.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>API Financeira</span>
+                    <span>Cache</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 4 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>🔐 Auth System</h2>
+            </div>
+            <div class="project-body">
+                <h3>Sistema de Autenticação</h3>
+                <p>Sistema de registro e login com JWT, validação de email e recuperação de senha.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>JWT</span>
+                    <span>PostgreSQL</span>
+                    <span>Bcrypt</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 5 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>📝 Blog Pessoal</h2>
+            </div>
+            <div class="project-body">
+                <h3>Plataforma de Blogging</h3>
+                <p>Sistema completo de blog com CRUD de posts, comentários e sistema de tags.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>MySQL</span>
+                    <span>Markdown</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 6 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>🛒 Lista de Compras</h2>
+            </div>
+            <div class="project-body">
+                <h3>App de Lista de Compras Colaborativo</h3>
+                <p>Lista de compras que permite compartilhamento entre usuários em tempo real.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>WebSockets</span>
+                    <span>SQLite</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 7 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>📞 Agenda de Contatos</h2>
+            </div>
+            <div class="project-body">
+                <h3>Gerenciador de Contatos Pessoal</h3>
+                <p>Agenda digital com busca, filtros e exportação de contatos.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>PostgreSQL</span>
+                    <span>CSV Export</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 8 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>🎯 Pomodoro Timer</h2>
+            </div>
+            <div class="project-body">
+                <h3>Temporizador de Técnica Pomodoro</h3>
+                <p>Implementa a técnica de gerenciamento de tempo com histórico de sessões.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>LocalStorage</span>
+                    <span>Web Workers</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 9 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>📷 Galeria de Fotos</h2>
+            </div>
+            <div class="project-body">
+                <h3>Galeria de Imagens com Upload</h3>
+                <p>Permite upload, organização e exibição de imagens com miniaturas.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>Upload de Arquivos</span>
+                    <span>Miniaturas</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projeto 10 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h2>📈 Dashboard de Gastos</h2>
+            </div>
+            <div class="project-body">
+                <h3>Controlador Financeiro Pessoal</h3>
+                <p>Dashboard para registrar e visualizar gastos com gráficos e categorias.</p>
+                
+                <div class="difficulty">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="tech">
+                    <span>Go</span>
+                    <span>React</span>
+                    <span>Chart.js</span>
+                    <span>PostgreSQL</span>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="btn">Ver Demo</a>
+                    <a href="#" class="btn btn-secondary">Código Fonte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>💡 <strong>Dica:</strong> Comece pelos projetos mais simples e gradualmente avance para os mais complexos.</p>
+        <p>✨ Cada projeto concluído é um grande passo para se tornar um desenvolvedor FullStack!</p>
+    </footer>
+</body>
+</html>
