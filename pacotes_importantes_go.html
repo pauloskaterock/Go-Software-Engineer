@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes Mais Importantes em Go</title>
+    <style>
+        :root {
+            --primary: #00ADD8;
+            --secondary: #007D9C;
+            --accent: #E44D26;
+            --light: #F8F9FA;
+            --dark: #24292E;
+            --success: #28A745;
+            --warning: #FFC107;
+            --danger: #DC3545;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f1f3f4;
+        }
+        
+        .usage-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-align: center;
+            min-width: 60px;
+        }
+        
+        .high-usage {
+            background-color: #e8f5e8;
+            color: var(--success);
+        }
+        
+        .medium-usage {
+            background-color: #fff3cd;
+            color: var(--warning);
+        }
+        
+        .low-usage {
+            background-color: #f8d7da;
+            color: var(--danger);
+        }
+        
+        .tips {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .tips h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+        
+        .external-package {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📊 Pacotes Mais Importantes em Go</h1>
+        <p>Um guia completo dos pacotes essenciais para desenvolvimento em Go</p>
+    </header>
+
+    <div class="section">
+        <h2>🥇 Top 10 Pacotes Mais Usados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pacote</th>
+                    <th>Descrição</th>
+                    <th>Uso</th>
+                    <th>Popularidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>fmt</code></td>
+                    <td>Formatação de entrada e saída</td>
+                    <td>Formatação I/O</td>
+                    <td><span class="usage-badge high-usage">100%</span></td>
+                </tr>
+                <tr>
+                    <td><code>net/http</code></td>
+                    <td>Cliente e servidor HTTP</td>
+                    <td>HTTP client/server</td>
+                    <td><span class="usage-badge high-usage">90%</span></td>
+                </tr>
+                <tr>
+                    <td><code>strings</code></td>
+                    <td>Manipulação de strings</td>
+                    <td>Manipulação de strings</td>
+                    <td><span class="usage-badge high-usage">85%</span></td>
+                </tr>
+                <tr>
+                    <td><code>encoding/json</code></td>
+                    <td>Codificação e decodificação JSON</td>
+                    <td>JSON parsing</td>
+                    <td><span class="usage-badge high-usage">80%</span></td>
+                </tr>
+                <tr>
+                    <td><code>database/sql</code></td>
+                    <td>Interface genérica para bancos SQL</td>
+                    <td>Banco de dados SQL</td>
+                    <td><span class="usage-badge medium-usage">70%</span></td>
+                </tr>
+                <tr>
+                    <td><code>os</code></td>
+                    <td>Interface com o sistema operacional</td>
+                    <td>Interface com SO</td>
+                    <td><span class="usage-badge medium-usage">65%</span></td>
+                </tr>
+                <tr>
+                    <td><code>io/ioutil</code></td>
+                    <td>Operações de entrada/saída</td>
+                    <td>Operações I/O</td>
+                    <td><span class="usage-badge medium-usage">60%</span></td>
+                </tr>
+                <tr>
+                    <td><code>strconv</code></td>
+                    <td>Conversão entre strings e tipos numéricos</td>
+                    <td>Conversão string/numérico</td>
+                    <td><span class="usage-badge medium-usage">55%</span></td>
+                </tr>
+                <tr>
+                    <td><code>time</code></td>
+                    <td>Funções para manipulação de tempo</td>
+                    <td>Manipulação de tempo</td>
+                    <td><span class="usage-badge medium-usage">50%</span></td>
+                </tr>
+                <tr>
+                    <td><code>sync</code></td>
+                    <td>Primitivas de sincronização</td>
+                    <td>Concorrência</td>
+                    <td><span class="usage-badge medium-usage">45%</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>📦 Pacotes Externos Mais Populares</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pacote</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Instalação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="external-package">Gin</td>
+                    <td>Framework web minimalista</td>
+                    <td>Web Framework</td>
+                    <td><code>go get -u github.com/gin-gonic/gin</code></td>
+                </tr>
+                <tr>
+                    <td class="external-package">Testify</td>
+                    <td>Kit de ferramentas para testes</td>
+                    <td>Testing</td>
+                    <td><code>go get -u github.com/stretchr/testify</code></td>
+                </tr>
+                <tr>
+                    <td class="external-package">GORM</td>
+                    <td>ORM para bancos de dados</td>
+                    <td>Database</td>
+                    <td><code>go get -u gorm.io/gorm</code></td>
+                </tr>
+                <tr>
+                    <td class="external-package">Cobra</td>
+                    <td>Framework para CLI applications</td>
+                    <td>CLI</td>
+                    <td><code>go get -u github.com/spf13/cobra</code></td>
+                </tr>
+                <tr>
+                    <td class="external-package">Viper</td>
+                    <td>Gerenciamento de configuração</td>
+                    <td>Configuration</td>
+                    <td><code>go get -u github.com/spf13/viper</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tips">
+        <h3>💡 Dicas de Uso</h3>
+        <ul>
+            <li><strong>Sempre prefira a Standard Library</strong> quando possível</li>
+            <li><strong>Use <code>go mod tidy</code></strong> para manter dependências organizadas</li>
+            <li><strong>Verifique a atividade do projeto no GitHub</strong> antes de adicionar dependências</li>
+            <li><strong>Mantenha as dependências atualizadas</strong> com <code>go get -u</code></li>
+            <li><strong>Documente suas dependências</strong> corretamente no <code>go.mod</code></li>
+            <li><strong>Teste compatibilidade</strong> ao atualizar versões de pacotes</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>📚 Lembre-se: A Standard Library do Go é extremamente rica - sempre verifique se já existe uma solução nativa antes de buscar pacotes externos!</p>
+        <p>© 2023 - Guia de Pacotes Go</p>
+    </footer>
+</body>
+</html>
